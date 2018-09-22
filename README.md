@@ -38,3 +38,27 @@ Python flask structure and directory convention specification
 ```bash
   $ python3 manage.py test
 ```
+
+* Directory convention specification
+
+```
+flask-project
+├── manage.py        # initial flask app
+├── app
+|   ├── common       # common package
+│   ├── models       # save SQLAlchemy ORM
+│   ├── services     # business logics
+│   ├── v1           # routes
+│   └── __init__.py  # create flask app
+├── config.py        # enviroment config
+├── requirements     # install dependency packages
+│   ├── development.txt
+│   ├──staging.txt
+│   └── production.txt
+└── tests            # unit test
+│   ├── factories
+│   ├── models
+│   ├── services
+│   └── __init__.py
+└── .env.example     # enviroment variable
+```
